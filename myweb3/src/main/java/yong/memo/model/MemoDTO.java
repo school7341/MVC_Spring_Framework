@@ -1,23 +1,23 @@
 package yong.memo.model;
 
 public class MemoDTO {
-	private int idx;
+	private int no;
 	private String title;
 	private String content;
 	public MemoDTO() {
 		super();
 	}
-	public MemoDTO(int idx, String title, String content) {
+	public MemoDTO(int no, String title, String content) {
 		super();
-		this.idx = idx;
+		this.no = no;
 		this.title = title;
 		this.content = content;
 	}
-	public int getIdx() {
-		return idx;
+	public int getNo() {
+		return no;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setNo(int no) {
+		this.no = no;
 	}
 	public String getTitle() {
 		return title;
@@ -33,7 +33,7 @@ public class MemoDTO {
 	}
 	@Override
 	public String toString(){
-		String str="No:"+idx+"\nTitle:"+title+"\nContent:"+content;
+		String str="No:"+no+"\nTitle:"+title+"\nContent:"+content;
 		return str;
 	}
 }

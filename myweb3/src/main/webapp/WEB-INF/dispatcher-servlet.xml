@@ -8,12 +8,15 @@
 
 <!-- service -->
 <bean id="memoDAO" class="yong.memo.model.MemoDAOImple"/>
+<bean id="joinDAO" class="yong.join.model.JoinDAOImple"/>
 
 <!-- controller -->
 <bean id="helloController" class="yong.controller.HelloController"/>
 <bean id="memoController" class="yong.controller.MemoController"/>
 <bean id="orderController" class="yong.controller.OrderController"/>
 <bean id="paramController" class="yong.controller.ParamController"/>
+<bean id="cookieController" class="yong.controller.CookieController"/>
+<bean id="PMP_EmployeeController" class="yong.controller.PMP_EmployeeController"/>
 
 <!-- view resolver -->
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

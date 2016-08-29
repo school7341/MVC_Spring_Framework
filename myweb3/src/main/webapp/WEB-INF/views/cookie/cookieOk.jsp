@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Succeed!! Write Memo</h2>
-<h4>User Input Number:${cmd.no}</h4>
-<h4>User Input Title:${cmd.title}</h4>
-<h4>User Input Content:${cmd.content}</h4>
-
+<h2>Cookie Check Completed!</h2>
 </body>
 </html>
