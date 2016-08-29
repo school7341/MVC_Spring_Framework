@@ -12,6 +12,7 @@
 <!-- controller -->
 <bean id="helloController" class="yong.controller.HelloController"/>
 <bean id="memoController" class="yong.controller.MemoController"/>
+<bean id="orderController" class="yong.controller.OrderController"/>
 
 <!-- view resolver -->
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

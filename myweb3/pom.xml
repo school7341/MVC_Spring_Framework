@@ -6,12 +6,23 @@
   <packaging>war</packaging>
   <name>myweb3</name>
   <description>SpringStudySite</description>
-  
+<repositories>
+	<repository>
+		<id>oracleDriver</id>
+		<url>http://maven.jahia.org.maven2</url>
+	</repository>
+</repositories>
+
     <properties>
   	<spring.version>3.2.4.RELEASE</spring.version>
   </properties>
   
   <dependencies>
+  	<dependency>
+  		<groupId>oracle</groupId>
+  		<artifactId>ojdbc14</artifactId>
+  		<version>10.2.0.4</version>
+  	</dependency>
   <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
 <dependency>
     <groupId>commons-dbcp</groupId>
@@ -117,9 +128,5 @@
     <artifactId>spring-tx</artifactId>
     <version>${spring.version}</version>
 </dependency>
-
-
-  	
-	
-  </dependencies>
+</dependencies>
 </project>
