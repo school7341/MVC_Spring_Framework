@@ -12,6 +12,7 @@
 	<li><a href="hello.do">The first Spring Page</a></li>
 	<li><a href="memoWrite.do">Write Memo</a></li>
 	<li><a href="order.do">Grocery Order List</a></li>
+	<li><a href="paramTest.do?str=spring&idx=3">Parameter Test</a></li>
 </ul>
 </body>
 </html>
