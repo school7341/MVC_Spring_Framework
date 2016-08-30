@@ -72,4 +72,10 @@ public class MemberController {
 			return mav;
 		}
 	}
+	@RequestMapping("/logout.do")
+	public String logout(HttpSession session){
+		session.invalidate();
+		return "redirect:/index.do";
+		
+	}
 }

@@ -17,7 +17,7 @@ function openLogin(){
 	<p><a href="javascript:openLogin()">로그인</a></p>
 </c:if>
 <c:if test="${!empty sessionScope.sid }">
-<p>${sessionScope.sname }님 로그인중...|로그아웃</p></c:if>
+<p>${sessionScope.sname }님 로그인중...|<a href="logout.do">로그아웃</a></p></c:if>
 
 <h2>Index.jsp</h2>
 <ul>
@@ -31,6 +31,15 @@ function openLogin(){
 	<li><a href="sessionMake.do">Session Make</a></li>
 	<li><a href="joinForm.do">PMP Create Account</a></li>
 	<li><a href="join.do">회원가입</a></li>
+	<li><a href="viewTest1.do">명시적뷰지정 1st</a></li>
+	<li><a href="viewTest2.do">명시적뷰지정 2nd</a></li>
+	<li><a href="view/viewTestOk.do">묵시적뷰지정 1nd</a></li>
+	<li><a href="viewTest3.do">The Spring page로 바로 이동</a></li>
+	<li><a href="modelTest1.do">뷰 데이터 전달하기(Map)</a></li>
+	<li><a href="modelTest2.do">뷰 데이터 전달하기(Model)</a></li>
+	<li><a href="modelTest3.do">뷰 데이터 전달하기(ModelMap)</a></li>
+	<li><a href="view/modelOk.do">뷰 데이터 전달하기(Map반환)</a></li>
+	<li><a href="view/modelOk.do">뷰 데이터 전달하기(Model반환)</a></li>
 </ul>
 </body>
 </html>
