@@ -1,3 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:forward page="index.do"></jsp:forward>
+<!DOCTYPE html>
+<script>
+	window.alert('${msg}');
+	location.href="index.do";
+</script>
