@@ -21,6 +21,7 @@
 <bean id="PMP_EmployeeController" class="yong.controller.PMP_EmployeeController"/>
 <bean id="memberController" class="yong.controller.MemberController"/>
 <bean id="viewTestController" class="yong.controller.ViewTestController"/>
+<bean id="animeController" class="yong.controller.AnimeController"/>
 
 <!-- view resolver -->
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

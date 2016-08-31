@@ -40,6 +40,7 @@ function openLogin(){
 	<li><a href="modelTest3.do">뷰 데이터 전달하기(ModelMap)</a></li>
 	<li><a href="view/modelOk.do">뷰 데이터 전달하기(Map반환)</a></li>
 	<li><a href="view/modelOk.do">뷰 데이터 전달하기(Model반환)</a></li>
+	<li><a href="animeForm.do">animation 검색하기</a></li>
 </ul>
 </body>
 </html>
