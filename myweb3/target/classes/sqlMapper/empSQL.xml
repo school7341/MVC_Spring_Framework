@@ -25,4 +25,15 @@
 	idx 
 	desc
 	</select>
+	<select id="empSearch" parameterType="yong.emp.model.EmpDTO" resultType="yong.emp.model.EmpDTO">
+	select 
+	* 
+	from 
+	employee 
+	where 
+	name=#{name}
+	</select>
+	<update id="empUpdate" parameterType="yong.emp.model.EmpDTO">
+		update employee set name=#{name},email=#{email},dept=#{dept} where idx=#{idx}
+	</update>
 </mapper>

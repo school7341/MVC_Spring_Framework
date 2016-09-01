@@ -29,4 +29,12 @@ public class EmpDAOImple implements EmpDAO {
 		
 		return list;
 	}
+	public List<EmpDTO> empSearch(EmpDTO dto) {
+		List<EmpDTO > list=sqlMap.selectList("empSearch",dto);
+		return list;
+	}
+	public int empUpdate(EmpDTO dto) {
+		int count=sqlMap.insert("empUpdate",dto);
+		return count;
+	}
 }

@@ -32,8 +32,11 @@
 		</fieldset>
 </form>
 <hr>
+
+			
 <form name="empDel" action="empDel.do">
 <fieldset>
+<legend>Delete Employee</legend>
 <table>
 <tr>
 <th>사원이름</th>
@@ -47,5 +50,20 @@
 <hr>
 <a href="empList.do">모두보기</a>
 </form>
+<hr>
+<form name="empSearch" action="empSearch.do">
+<fieldset>
+<legend>Update Employee</legend>
+<table>
+<tr>
+<th>사원이름</th>
+<td><input type="text" name="name"></td>
+<td><input type="submit" value="전달"></td>
+</tr>
+</table>
+
+</fieldset>
+</form>
+
 </body>
 </html>
