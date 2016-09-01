@@ -21,6 +21,7 @@ function openLogin(){
 
 <h2>Index.jsp</h2>
 <ul>
+	<li><a href="emp.do">사원관리프로그램</a></li>
 	<li><a href="hello.do">The first Spring Page</a></li>
 	<li><a href="memoWrite.do">Write Memo</a></li>
 	<li><a href="order.do">Grocery Order List</a></li>

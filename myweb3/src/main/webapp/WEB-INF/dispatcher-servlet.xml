@@ -2,7 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
 <!-- config -->
 <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -13,6 +12,11 @@
 <bean id="memoDAO" class="yong.memo.model.MemoDAOImple"/>
 <bean id="joinDAO" class="yong.join.model.JoinDAOImple"/>
 <bean id="memberDAO" class="yong.member.model.MemberDAOImple"/>
+<bean id="empDAO" class="yong.emp.model.EmpDAOImple">
+	<constructor-arg>
+		<ref bean="sqlSessionTemplate"/>	
+	</constructor-arg>
+</bean>
 
 <!-- controller -->
 <bean id="indexController" class="yong.controller.IndexController"/>
@@ -26,6 +30,7 @@
 <bean id="viewTestController" class="yong.controller.ViewTestController"/>
 <bean id="animeController" class="yong.controller.AnimeController"/>
 <bean id="fileController" class="yong.controller.FileController"/>
+<bean id="empController" class="yong.controller.EmpController"/>
 
 <!-- view -->
 <bean id="yongDownload" class="yong.view.DownloadView"/>
@@ -37,5 +42,24 @@
 </bean>
 <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
 	<property name="order" value="0"/>
+</bean>
+<!--1.DataBase  -->
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl2"/>
+<property name="username" value="scott"/>
+<property name="password" value="1234"/>
+</bean>
+<!--2.Transaction  -->
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<property name="dataSource" ref="dataSource"/>
+</bean>
+<!--3.myBatis  -->
+<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"/>
+	<property name="configLocation" value="classpath:/mybatis-config.xml"/>
+</bean>
+<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
 </bean>
 </beans>
