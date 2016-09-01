@@ -31,6 +31,8 @@
 			</table>
 		</fieldset>
 </form>
-
+<form name="empDel" action="empDel.do">
+IDX : <input type="text" name="idx"><input type="submit" value="전달">
+</form>
 </body>
 </html>

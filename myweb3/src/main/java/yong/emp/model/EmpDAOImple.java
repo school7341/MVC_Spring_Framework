@@ -18,5 +18,8 @@ public class EmpDAOImple implements EmpDAO {
 		int count=sqlMap.insert("empInsert",dto);
 		return count;
 	}
-
+	public int empDel(EmpDTO dto) {
+		int count=sqlMap.insert("empDelete",dto);
+		return count;
+	}
 }

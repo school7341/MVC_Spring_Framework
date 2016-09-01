@@ -27,4 +27,11 @@ public class EmpController {
 		return mav;
 		
 	}
+	@RequestMapping("/empDel.do")
+	public ModelAndView empDel(EmpDTO dto){
+		int result=empDao.empDel(dto);
+		String msg=result>0?"Delete success":"Delete Fail";
+		ModelAndView mav=new ModelAndView("emp/empMsg","msg",msg);
+		return mav;
+	}
 }

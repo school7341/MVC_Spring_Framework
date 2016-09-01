@@ -13,4 +13,7 @@
 		#{dept}
 		)
 	</insert>
+	<delete id="empDelete" parameterType="yong.emp.model.EmpDTO">
+		delete employee where idx=#{idx}
+	</delete>
 </mapper>
