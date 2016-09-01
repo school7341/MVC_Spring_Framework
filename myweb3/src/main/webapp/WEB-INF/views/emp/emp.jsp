@@ -57,7 +57,7 @@
 <table>
 <tr>
 <th>사원이름</th>
-<td><input type="text" name="name"></td>
+<td><input type="text" name="name_s"></td>
 <td><input type="submit" value="전달"></td>
 </tr>
 </table>

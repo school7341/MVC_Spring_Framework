@@ -25,13 +25,13 @@
 	idx 
 	desc
 	</select>
-	<select id="empSearch" parameterType="yong.emp.model.EmpDTO" resultType="yong.emp.model.EmpDTO">
+	<select id="empSearch"  resultType="yong.emp.model.EmpDTO">
 	select 
 	* 
 	from 
 	employee 
 	where 
-	name=#{name}
+	name like #{name_s}
 	</select>
 	<update id="empUpdate" parameterType="yong.emp.model.EmpDTO">
 		update employee set name=#{name},email=#{email},dept=#{dept} where idx=#{idx}

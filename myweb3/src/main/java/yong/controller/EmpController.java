@@ -43,14 +43,15 @@ public class EmpController {
 		return mav;
 	}
 	@RequestMapping("/empSearch.do")
-	public ModelAndView empSearch(EmpDTO dto){
-		List<EmpDTO> list=empDao.empSearch(dto);
+	public ModelAndView empSearch(String name_s){
+		name_s="%"+name_s+"%";
+		System.out.println(name_s);
+		List<EmpDTO> list=empDao.empSearch(name_s);
 		ModelAndView mav=new ModelAndView("emp/empSearch","list",list);
 		return mav;
 	}
 	@RequestMapping("/empUpdate.do")
 	public ModelAndView empUpdate(EmpDTO dto){
-		List<EmpDTO> list=empDao.empSearch(dto);
 		int result=empDao.empUpdate(dto);
 		String msg=result>0?"Update success":"Update Fail";
 		ModelAndView mav=new ModelAndView("emp/empMsg","msg",msg);

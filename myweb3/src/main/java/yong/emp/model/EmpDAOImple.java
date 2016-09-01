@@ -29,8 +29,8 @@ public class EmpDAOImple implements EmpDAO {
 		
 		return list;
 	}
-	public List<EmpDTO> empSearch(EmpDTO dto) {
-		List<EmpDTO > list=sqlMap.selectList("empSearch",dto);
+	public List<EmpDTO> empSearch(String name_s) {
+		List<EmpDTO > list=sqlMap.selectList("empSearch",name_s);
 		return list;
 	}
 	public int empUpdate(EmpDTO dto) {
