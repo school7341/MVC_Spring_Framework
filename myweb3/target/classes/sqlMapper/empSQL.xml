@@ -14,6 +14,15 @@
 		)
 	</insert>
 	<delete id="empDelete" parameterType="yong.emp.model.EmpDTO">
-		delete employee where idx=#{idx}
+		delete employee where name=#{name}
 	</delete>
+	<select id="empAllList" resultType="yong.emp.model.EmpDTO">
+	select 
+	* 
+	from 
+	employee 
+	order by 
+	idx 
+	desc
+	</select>
 </mapper>

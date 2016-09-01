@@ -31,8 +31,21 @@
 			</table>
 		</fieldset>
 </form>
+<hr>
 <form name="empDel" action="empDel.do">
-IDX : <input type="text" name="idx"><input type="submit" value="전달">
+<fieldset>
+<table>
+<tr>
+<th>사원이름</th>
+<td><input type="text" name="name"></td>
+<td><input type="submit" value="전달"></td>
+</tr>
+</table>
+
+</fieldset>
+</form>
+<hr>
+<a href="empList.do">모두보기</a>
 </form>
 </body>
 </html>

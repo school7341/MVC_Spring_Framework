@@ -1,5 +1,7 @@
 package yong.emp.model;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 
 public class EmpDAOImple implements EmpDAO {
@@ -21,5 +23,10 @@ public class EmpDAOImple implements EmpDAO {
 	public int empDel(EmpDTO dto) {
 		int count=sqlMap.insert("empDelete",dto);
 		return count;
+	}
+	public List<EmpDTO> empList() {
+		List<EmpDTO > list=sqlMap.selectList("empAllList");
+		
+		return list;
 	}
 }
