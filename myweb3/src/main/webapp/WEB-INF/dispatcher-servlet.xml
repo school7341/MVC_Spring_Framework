@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 <!-- config -->
 <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 <property name="maxUploadSize" value="104857600"></property>
 </bean>
+<context:component-scan base-package="yong" use-default-filters="false">
+	<context:include-filter type="annotation" 
+		expression="org.springframework.stereotype.Controller"/>
+</context:component-scan>
 
 <!-- service -->
 <bean id="memoDAO" class="yong.memo.model.MemoDAOImple"/>
@@ -17,20 +25,13 @@
 		<ref bean="sqlSessionTemplate"/>	
 	</constructor-arg>
 </bean>
-
+<bean id="bbsDAO" class="yong.bbs.model.BbsDAOImple">
+	<constructor-arg>
+		<ref bean="sqlSessionTemplate"/>	
+	</constructor-arg>
+</bean>
 <!-- controller -->
-<bean id="indexController" class="yong.controller.IndexController"/>
-<bean id="helloController" class="yong.controller.HelloController"/>
-<bean id="memoController" class="yong.controller.MemoController"/>
-<bean id="orderController" class="yong.controller.OrderController"/>
-<bean id="paramController" class="yong.controller.ParamController"/>
-<bean id="cookieController" class="yong.controller.CookieController"/>
-<bean id="PMP_EmployeeController" class="yong.controller.PMP_EmployeeController"/>
-<bean id="memberController" class="yong.controller.MemberController"/>
-<bean id="viewTestController" class="yong.controller.ViewTestController"/>
-<bean id="animeController" class="yong.controller.AnimeController"/>
-<bean id="fileController" class="yong.controller.FileController"/>
-<bean id="empController" class="yong.controller.EmpController"/>
+
 
 <!-- view -->
 <bean id="yongDownload" class="yong.view.DownloadView"/>

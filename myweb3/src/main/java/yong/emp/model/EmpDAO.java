@@ -1,5 +1,5 @@
 package yong.emp.model;
-import java.util.*;;
+import java.util.*;
 
 public interface EmpDAO {
 	public int empAdd(EmpDTO dto);
