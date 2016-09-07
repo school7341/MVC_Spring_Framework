@@ -43,9 +43,13 @@ public class MemberController {
 	}
 
 	@RequestMapping("/idCheckForm.do")
-	public ModelAndView idCheckForm() {
+	public ModelAndView idCheckForm(@RequestParam("userid")String userid) {
+			boolean result=memberDao.idCheck(userid);
+			String msg=result?"[이미 가입된 ID입니다.]":"[사용가능한 ID입니다.]";
+		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("member/idCheckForm");
+		mav.addObject("msg", msg);
+		mav.setViewName("member/idCheck");
 		return mav;
 	}
 

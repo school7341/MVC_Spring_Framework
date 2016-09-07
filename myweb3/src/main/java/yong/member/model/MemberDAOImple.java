@@ -91,5 +91,28 @@ public class MemberDAOImple implements MemberDAO {
 			}
 		}
 	}
+	public boolean idCheck(String userid) {
 
+		try {
+			conn = yong.db.YongDB.getConn();
+			String sql = "select id from jsp_member where id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, userid);
+			rs = ps.executeQuery();
+			return rs.next();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (ps != null)
+					ps.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e2) {
+			}
+		}
+	}
 }
