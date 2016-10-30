@@ -32,7 +32,7 @@ function initialize() {
 
   var myOptions = {
 
-  zoom: 15,
+  zoom: 15,//지도 크기
 
   center: myLatlng,
 
@@ -49,20 +49,23 @@ google.maps.event.addListener(map, 'click', function(event) {
 
   var marker = new google.maps.Marker({ 
 
-  position: event.latLng, 
-
+  //position: latLng, 
+  position: event.latLng,
+  
   map: map,
 
   title: '위치마커'
 
 });
+  
 
 
-attachMessage(marker, event.latLng); 
-
+//attachMessage(marker, latLng); 
+attachMessage(marker, event.latLng);
 //선을 그리기 위해 좌표를 넣는다.
 
-Coordinates.push( event.latLng ); 
+//Coordinates.push( latLng ); 
+Coordinates.push( event.latLng );
 
 //마커 담기
 

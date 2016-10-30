@@ -15,6 +15,17 @@
 		<td><input type="text" name="writer"></td>
 		<th>비밀번호 :</th>
 		<td><input type="password" name="pwd"></td>
+		<select name="WRITE_CODE_IDX">
+		<option value=1>1 : BUYCYCLE_PLACE_CONTENT</option>
+		<option value=2>2 : INLINE_PLACE_CONTENT</option>
+		<option value=3>3 : SKATE_BOARD_CONTENT</option>
+		<option value=4>4 : REQ_MAP_DATA</option>
+		<option value=5>5 : FREE_NOTIC</option>
+		<option value=6>6: FREE_BBS</option>
+		<option value=7>7 : FREE_QnA</option>
+		</select>
+		<th>Map Data 요청하기 : </th>
+		<td><input type="text" name="map_data_1">, <input type="text" name="map_data_1"></td>
 	</tr>
 		<tr>
 		<th>제목 :</th>
@@ -22,6 +33,7 @@
 		<tr>
 		<td colspan="4"><textarea rows="15" cols="55" name="content"></textarea></td>
 		</tr>
+		
 	<tr>
 	<td colspan="4" align="center">
 		<input type="submit" value="글쓰기">

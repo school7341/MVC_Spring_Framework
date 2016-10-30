@@ -6,5 +6,7 @@
  	<mappers>
  		<mapper resource="sqlMapper/empSQL.xml"/>
  		<mapper resource="sqlMapper/bbsSQL.xml"/>
+ 		<mapper resource="sqlMapper/mapSQL.xml"/>
+ 		<mapper resource="sqlMapper/insaSQL.xml"/>
  	</mappers>
  </configuration>

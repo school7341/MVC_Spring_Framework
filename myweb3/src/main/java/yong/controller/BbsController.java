@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import yong.bbs.model.BbsDAO;
 import yong.bbs.model.BbsDTO;
-import yong.emp.model.EmpDTO;
+
 
 
 

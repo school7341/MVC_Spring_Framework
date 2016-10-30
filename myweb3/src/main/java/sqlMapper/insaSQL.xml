@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yong.insa">
+	<insert id="insaInsert" parameterType="yong.insa.model.InsaDTO">
+		insert into insa 
+		values 
+		(
+		#{sabun},sysdate,sysdate,#{put_yn},#{name},#{reg_no},#{eng_name},
+		#{phone},#{hp},#{carrier},#{pos_gbn_code},#{cmp_reg_no},#{cmp_reg_image},
+		#{sex},#{years},#{email},#{zip},#{addr1},#{addr2},#{mil_yn},#{join_gbn_code}
+		)
+	</insert>
+	<delete id="insaDelete" parameterType="yong.insa.model.InsaDTO">
+		delete insa where sabun=#{sabun}
+	</delete>
+	<select id="insaAllList" resultType="yong.insa.model.InsaDTO">
+	select 	* from insa order by sabun desc
+	</select>
+	<select id="insaSearch"  resultType="yong.insa.model.InsaDTO">
+	select 	* from insa	where sabun = #{sabun}
+	</select>
+	<update id="insaUpdate" parameterType="yong.insa.model.InsaDTO">
+		update insa set
+		JOIN_DAY=#{join_day},RETIRE_DAY=#{retire_day},PUT_YN=#{put_yn},NAME=#{name},REG_NO=#{reg_no},ENG_NAME=#{eng_name},
+		PHONE=#{phone},HP=#{hp},CARRIER=#{carrier},POS_GBN_CODE=#{pos_gbn_code},CMP_REG_NO=#{cmp_reg_no},CMP_REG_IMAGE=#{cmp_reg_image},
+		SEX=#{sex},YEARS=#{years},EMAIL=#{email},ZIP=#{zip},ADDR1=#{addr1},ADDR2=#{addr2},MIL_YN=#{mil_yn},JOIN_GBN_DATE=#{join_gbn_code}
+		where SABUN=#{sabun}
+	</update>
+</mapper>

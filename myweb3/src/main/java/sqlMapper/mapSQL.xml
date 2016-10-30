@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yong.map">
+	<select id="mapAllList" resultType="yong.map.model.MapDTO">
+	<![CDATA[ 
+	select map_data_1,map_data_2 from map where  SUBSTR(SPOT_ID_MN,2,10)<1500 order by map_idx
+	]]>
+	</select>
+</mapper>

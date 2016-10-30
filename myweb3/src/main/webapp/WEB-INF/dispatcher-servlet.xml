@@ -17,6 +17,7 @@
 </context:component-scan>
 
 <!-- service -->
+
 <bean id="memoDAO" class="yong.memo.model.MemoDAOImple"/>
 <bean id="joinDAO" class="yong.join.model.JoinDAOImple"/>
 <bean id="memberDAO" class="yong.member.model.MemberDAOImple"/>
@@ -28,6 +29,16 @@
 <bean id="bbsDAO" class="yong.bbs.model.BbsDAOImple">
 	<constructor-arg>
 		<ref bean="sqlSessionTemplate"/>	
+	</constructor-arg>
+</bean>
+<bean id="mapDAO" class="yong.map.model.MapDAOImple">
+	<constructor-arg>
+		<ref bean="sqlSessionTemplate"/>	
+	</constructor-arg>
+</bean>
+<bean id="insaDAO" class="yong.insa.model.InsaDAOImple">
+	<constructor-arg>
+		<ref bean="sqlSessionTemplate"/>
 	</constructor-arg>
 </bean>
 <!-- controller -->
